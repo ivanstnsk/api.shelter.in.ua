@@ -1,1 +1,1 @@
-# api.shelter.in.ua
+# Trip Helper API
