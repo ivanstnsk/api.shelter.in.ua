@@ -1,3 +1,6 @@
+import { gql } from 'apollo-server-core';
+
+export const typeDefs = gql`
 input CititesFilter {
   level_1: Int
   level_2: Int
@@ -29,3 +32,4 @@ type City {
 type Query {
   cities(input: CitiesInput): CitiesPayload!
 }
+`;
