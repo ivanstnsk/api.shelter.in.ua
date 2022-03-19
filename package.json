@@ -2,10 +2,10 @@
   "name": "api-shelter-in-ua",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node 'dist/index.js'",
-    "build": "tsc -p . && ncp src/schema dist/schema",
+    "start": "node 'api/index.js'",
+    "build": "tsc -p . && ncp src/schema api/schema",
     "start:dev": "concurrently \"yarn build:dev\" \"yarn generate-types --watch\"",
     "build:dev": "nodemon 'src/index.ts' --exec 'ts-node'",
     "generate-types": "graphql-codegen --config codegen.yml"
