@@ -1,7 +1,7 @@
 {
   "name": "api-shelter-in-ua",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shelter in UA API",
   "main": "api/index.js",
   "scripts": {
     "start": "node 'api/index.js'",
