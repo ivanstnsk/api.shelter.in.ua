@@ -12,8 +12,10 @@ import { FileDataSource } from './datasources/FileDataSource';
 
 config();
 
+const app = express();
+const httpServer = createServer(app);
+
 const bootstrap = async () => {
-  const app = express();
   const server = new ApolloServer({
     schema,
     dataSources: () => ({
@@ -36,7 +38,6 @@ const bootstrap = async () => {
   await server.start();
 
   server.applyMiddleware({ app, path: '/graphql' });
-  const httpServer = createServer(app);
 
   httpServer.listen(
     { port: process.env.PORT },
@@ -45,3 +46,5 @@ const bootstrap = async () => {
 };
 
 bootstrap();
+
+export default httpServer;
