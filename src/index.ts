@@ -23,6 +23,11 @@ const bootstrap = async () => {
     plugins: [
       ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
+    context: ({ req }) => {
+      const { authorization: token } = req.headers;
+
+      return { token };
+    },
   });
 
   app.use('*', cors());
