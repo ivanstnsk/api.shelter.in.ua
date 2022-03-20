@@ -47,4 +47,4 @@ const bootstrap = async () => {
 
 bootstrap();
 
-export default httpServer;
+export default bootstrap;
