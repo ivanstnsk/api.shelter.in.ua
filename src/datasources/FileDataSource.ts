@@ -10,7 +10,7 @@ export class FileDataSource extends DataSource {
 
   async getAllCities(): Promise<any> {
     return new Promise((resolve) => {
-      fs.readFile(`${__dirname}/../data/cities.json`, 'utf8', (err, data) => {
+      fs.readFile(`${__dirname}/../../data/cities.json`, 'utf8', (err, data) => {
         if (err) {
           console.log('ERROR no data (need to add more logging here');
           resolve([]);

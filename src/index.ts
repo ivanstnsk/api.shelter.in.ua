@@ -37,14 +37,14 @@ const bootstrap = async () => {
 
   await server.start();
 
-  server.applyMiddleware({ app, path: '/graphql' });
+  server.applyMiddleware({ app, path: '/api' });
 
   httpServer.listen(
     { port: process.env.PORT },
-    (): void => console.log(`\n🚀 GraphQL is now running on http://localhost:${process.env.PORT}/graphql`)
+    (): void => console.log(`\n🚀 GraphQL is now running on http://localhost:${process.env.PORT}/api`)
   );
 };
 
 bootstrap();
 
-export default bootstrap;
+export default app;

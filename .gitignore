@@ -105,3 +105,4 @@ dist
 
 # Vercel api folder
 api/
+.vercel
